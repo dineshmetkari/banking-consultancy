@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="1">
+    <LinearLayout 
+    android:layout_height="wrap_content" 
+    android:id="@+id/linearLayout1" 
+    android:layout_width="match_parent">
+    
+    
+        <TextView 
+        android:layout_height="wrap_content" 
+        android:id="@+id/textView1" 
+        android:text="TimNH" 
+        android:layout_width="wrap_content" 
+        android:layout_weight="0.25">
+        </TextView>
+        
+        
+        <EditText 
+        android:layout_height="wrap_content" 
+        android:layout_width="wrap_content" 
+        android:id="@+id/editText1" 
+        android:layout_weight="0.78">
+            <requestFocus>
+            
+            </requestFocus>
+        </EditText>
+    </LinearLayout>
+    <LinearLayout 
+    android:layout_height="wrap_content" 
+    android:id="@+id/linearLayout2" 
+    android:layout_width="match_parent">
+    
+        <TextView 
+        android:layout_height="wrap_content" 
+        android:id="@+id/textView2" 
+        android:text="KhuVucQuan" 
+        android:layout_width="wrap_content" 
+        android:layout_weight="0.16">
+        </TextView>
+        
+        
+        <EditText 
+        android:layout_height="wrap_content" 
+        android:layout_width="wrap_content" 
+        android:id="@+id/editText2" 
+        android:layout_weight="1.36">
+        </EditText>
+    </LinearLayout>
+    <LinearLayout 
+    android:layout_height="wrap_content" 
+    android:id="@+id/linearLayout3" 
+    android:layout_width="match_parent" 
+    android:weightSum="1">
+    
+    
+        <Button 
+        android:layout_height="wrap_content" 
+        android:text="TimNH" 
+        android:id="@+id/button1" 
+        android:layout_width="113dp" 
+        android:layout_weight="0.30">
+        </Button>
+        
+        
+        <Button 
+        android:layout_height="wrap_content" 
+        android:text="TimATM" 
+        android:layout_width="wrap_content" 
+        android:id="@+id/button2" 
+        android:layout_gravity="right" 
+        android:layout_weight="0.66">
+        </Button>
+    </LinearLayout>
+    <GridView android:id="@+id/gridView1" 
+    android:layout_width="match_parent" 
+    android:numColumns="3" android:layout_height="246dp">
+    </GridView>
+    
+    
+    <LinearLayout 
+    android:layout_height="wrap_content" 
+    android:id="@+id/linearLayout4" 
+    android:layout_width="match_parent" 
+    android:layout_weight="0.44" 
+    android:weightSum="1">
+    
+    
+        <Button 
+        android:layout_height="wrap_content" 
+        android:text="Button" 
+        android:layout_width="wrap_content" 
+        android:id="@+id/button3" 
+        android:layout_weight="0.24">
+        </Button>
+        
+        
+        <Button 
+        android:layout_height="wrap_content" 
+        android:text="Button" 
+        android:layout_width="wrap_content" 
+        android:id="@+id/button4" 
+        android:layout_weight="0.42">
+        </Button>
+        
+        
+        <Button 
+        android:layout_height="wrap_content" 
+        android:text="Button" 
+        android:layout_width="wrap_content" 
+        android:id="@+id/button5" 
+        android:layout_weight="0.34">
+        </Button>
+        
+        
+    </LinearLayout>
+</LinearLayout>
