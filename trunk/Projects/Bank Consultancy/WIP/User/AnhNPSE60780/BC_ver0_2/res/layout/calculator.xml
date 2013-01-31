@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+    
+    <TextView 
+    	android:layout_width="wrap_content" 
+    	android:layout_height="wrap_content" 
+    	android:id="@+id/txtBankName_Cal" 
+    	android:text="TextView" 
+    	android:textAppearance="?android:attr/textAppearanceLarge">
+    </TextView>
+    
+    <TextView 
+    	android:layout_width="wrap_content" 
+    	android:layout_height="wrap_content" 
+    	android:id="@+id/textview1" 
+    	android:text="Interest Type" 
+    	android:textAppearance="?android:attr/textAppearanceMedium">
+    </TextView>
+    
+    <Spinner 
+    	android:id="@+id/spIntType_Cal" 
+    	android:layout_width="match_parent" 
+    	android:layout_height="wrap_content">
+    </Spinner>
+    
+    
+    <LinearLayout 
+    	android:id="@+id/linearLayout1" 
+    	android:layout_width="match_parent" 
+    	android:layout_height="wrap_content">
+    	
+        <TextView 
+        	android:text="Interest Rate" 
+        	android:id="@+id/textView3" 
+        	android:layout_width="wrap_content" 
+        	android:layout_height="wrap_content"
+        	android:layout_weight="1"
+        	android:textAppearance="?android:attr/textAppearanceMedium">
+        </TextView>
+        
+        <TextView 
+        	android:text="TextView" 
+        	android:id="@+id/txtIntRate_Cal" 
+        	android:layout_width="wrap_content" 
+        	android:layout_height="wrap_content"
+        	android:layout_weight="1"
+        	android:textAppearance="?android:attr/textAppearanceMedium">
+        </TextView>
+    </LinearLayout>
+    
+    <TextView 
+    	android:layout_width="wrap_content" 
+    	android:layout_height="wrap_content" 
+    	android:id="@+id/textView5" 
+    	android:text="Money In" 
+    	android:textAppearance="?android:attr/textAppearanceMedium">
+    </TextView>
+    
+    <EditText 
+    	android:id="@+id/txtMoneyIn_Cal" 
+    	android:layout_width="match_parent" 
+    	android:layout_height="wrap_content">
+        <requestFocus></requestFocus>
+    </EditText>
+    
+    <Button 
+    	android:text="Calculate" 
+    	android:id="@+id/btnCal_Cal" 
+    	android:layout_width="wrap_content" 
+    	android:layout_height="wrap_content">
+    </Button>
+    
+    <TextView 
+    	android:id="@+id/textView2" 
+    	android:textAppearance="?android:attr/textAppearanceLarge" 
+    	android:text="Money Out" 
+    	android:layout_width="wrap_content" 
+    	android:layout_height="wrap_content">
+    </TextView>
+    
+    <EditText 
+    	android:id="@+id/txtMoneyOut_Cal" 
+    	android:layout_width="match_parent" 
+    	android:layout_height="wrap_content"
+    	android:editable="false">
+    </EditText>
+    
+</LinearLayout>
