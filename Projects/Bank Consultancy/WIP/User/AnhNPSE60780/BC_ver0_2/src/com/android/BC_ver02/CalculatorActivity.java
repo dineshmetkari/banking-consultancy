@@ -120,7 +120,7 @@ public class CalculatorActivity extends Activity {
 				String rate = mCursor.getString(0);
 				String time = mCursor.getString(1);				
 												
-				items.put(time+" months", rate+"%");
+				items.put(time+" tháng", rate+"%");
 				mCursor.moveToNext();
 			}
 		}catch(Exception e){

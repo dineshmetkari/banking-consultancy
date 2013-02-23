@@ -37,7 +37,7 @@ public class DBHelper
 	private SQLiteDatabase mDB;
 	//thay doi de tao bang
 	private static final String DATABASE_CREATE = "create table items (_name text, image text not null);";
-	private static final String DATABASE_NAME = "BankConsultancy1";
+	private static final String DATABASE_NAME = "Bank1";
 	
 	private final Context mContext;
 	
@@ -103,4 +103,16 @@ public class DBHelper
 		String sql = String.format("select bi.InterestRate, i.InterestTime from BankInterest bi, Interest i WHERE bi.BankID=%s AND bi.InterestID=i.InterestID", BankID);
 		return mDB.rawQuery(sql,null);
 	}
+	
+	public Cursor getVersion()
+	{
+		return mDB.rawQuery("Select MAX(version) from Version", null);
+	}
+	
+	public Cursor getBankInfo(String BankID)
+	{
+		String args[] = new String[1];
+		args[0] = BankID;
+		return mDB.rawQuery("Select * from Bank where BankID=?", args);
+	}	
 }
