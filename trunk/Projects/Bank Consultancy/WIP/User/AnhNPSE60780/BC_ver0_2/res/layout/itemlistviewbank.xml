@@ -19,4 +19,24 @@
     	android:layout_height="wrap_content">
     </TextView>
     
+    <LinearLayout 
+    	android:id="@+id/linearLayout1" 
+    	android:layout_height="wrap_content" 
+    	android:layout_width="match_parent">
+    	
+        <Button 
+        	android:text="Xem thông tin" 
+        	android:id="@+id/btnInfo_Itemlistviewbank" 
+        	android:layout_width="wrap_content" 
+        	android:layout_height="wrap_content">
+        </Button>
+        
+        <Button 
+        	android:text="Tính tiền" 
+        	android:id="@+id/btnCal_Itemlistviewbank" 
+        	android:layout_width="wrap_content" 
+        	android:layout_height="wrap_content">
+        </Button>
+    </LinearLayout>
+    
 </LinearLayout>

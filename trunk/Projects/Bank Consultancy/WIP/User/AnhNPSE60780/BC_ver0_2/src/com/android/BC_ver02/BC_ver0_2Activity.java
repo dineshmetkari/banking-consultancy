@@ -23,32 +23,18 @@ public class BC_ver0_2Activity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.listbank);
         
         listBank = (ListView)findViewById(R.id.listviewBank_Main);
         mDB = new DBHelper(this);
         mDB.open();
         
-        listItem = new ArrayList<ItemListviewBank_Main>();
+//        listItem = new ArrayList<ItemListviewBank_Main>();
         listItem = getData();
         
         adapter = new BankNameAdapter(getApplicationContext(),listItem);        
         listBank.setAdapter(adapter);
-        
-        listBank.setOnItemClickListener(new OnItemClickListener() {
-
-			@Override
-			public void onItemClick(AdapterView<?> arg0, View view1, int position,
-					long arg3) {
-				// TODO Auto-generated method stub
-				Intent intent = new Intent(getApplicationContext(), CalculatorActivity.class);
-				TextView txtID = (TextView)view1.findViewById(R.id.txtIDItemlistviewbank);
-				String id = (String) txtID.getText();
-				intent.putExtra("id", id);
-				startActivity(intent);
-			}
-        	
-		});
+               
     }
     
     private ArrayList<ItemListviewBank_Main> getData(){
