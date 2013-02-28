@@ -1,0 +1,63 @@
+http://www.websequencediagrams.com/#
+--------------------------------------------------------
+title Update Database
+
+Customer->BC_App: Update Database Request
+BC_App->BC_Server: check server available
+BC_Server-->BC_App: access response
+BC_App->BC_App: get current version DB
+BC_App->BC_Server: send current version DB
+BC_Server->Database: get new version DB
+Database-->BC_Server: return new version DB
+BC_Server->BC_Server: compare old vs new version db
+BC_Server-->BC_App: response the result of compare
+BC_App->Database: [result=true] get new DB
+Database-->BC_App: return new DB
+BC_App-->Customer: show new version DB
+
+
+----------------------------------------------------------------
+title View Bank Information
+
+Customer->BC_App: view bank information req.
+BC_App->BC_DB: get list bank
+BC_DB-->BC_App: return list bank
+BC_App-->Customer: list bank
+Customer->BC_App: Select bank
+BC_App->BC_DB: get info.
+BC_DB-->BC_App: return info.
+BC_App-->Customer: show info.
+----------------------------------------------------------------
+title Calculate Money
+
+Customer->BC_App: Calculate Money req.
+BC_App->BC_DB: get list bank
+BC_DB-->BC_App: return list bank
+BC_App-->Customer: list bank
+Customer->BC_App: Select bank
+BC_App->BC_DB: get interest&months
+BC_DB-->BC_App: return interest&months
+BC_App-->Customer: show interest&months
+Customer->BC_App: select months,input deposit
+BC_App->BC_App: Calculate
+BC_App-->Customer: Show money will receive
+----------------------------------------------------------------
+title Calculate Interest Rate
+
+Customer->BC_App: calculate rate req.
+BC_App-->Customer: show input form
+Customer->BC_App: input deposit, needed money, months
+BC_App->BC_App: Calculate interest rate
+BC_App-->Customer: show interest rate
+----------------------------------------------------------------
+title Top 10 High Rate Interest Bank
+
+Customer->BC_App: view top 10 banks req.
+BC_App->BC_DB: get months
+BC_DB-->BC_App: return months
+BC_App-->Customer: show months
+Customer->BC_App: select months
+BC_App->BC_DB: get top banks
+BC_DB-->BC_App: return top banks
+BC_App-->Customer: show top banks
+----------------------------------------------------------------
