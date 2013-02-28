@@ -1,0 +1,13 @@
+http://yuml.me/diagram/scruffy/usecase/draw
+------------------------------------------
+[Customer]-(Update database)
+------------------------------------------
+[Customer]-(View Information)
+------------------------------------------
+[Customer]-(Calculate Money)
+------------------------------------------
+[Customer]-(View Top High Interest Rate Bank)
+------------------------------------------
+[Customer]-(Calculate Interest Rate)
+------------------------------------------
+------------------------------------------
